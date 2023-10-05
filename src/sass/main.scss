@@ -3,8 +3,14 @@
 @use "pages" as *;
 
 #App {
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+
+  .homepage {
+    @include Header();
+
+    max-width: 100rem;
+    width: 80%;
+  }
 }
