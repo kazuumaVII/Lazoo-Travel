@@ -1,0 +1,67 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Set default padding to 0 */
+body,
+button,
+input,
+select,
+textarea {
+  padding: 0;
+}
+
+/* Remove default border */
+button,
+input {
+  border: 0;
+  background-color: transparent;
+}
+
+/* Remove outline on focused elements */
+:focus {
+  outline: none;
+}
+
+/* Set default font size and line height */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Set default font family */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Remove default background color */
+body {
+  background-color: transparent;
+}
