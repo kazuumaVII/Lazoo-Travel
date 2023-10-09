@@ -1,23 +1,19 @@
 @use "../utils" as *;
 
-@mixin ButtonAnimSquare() {
+@mixin ButtonAnimSquare(
+  $background: red,
+  $backgroundAnim: black,
+  $borderColor: black,
+  $textColor: white
+) {
   button {
-    outline: none;
     cursor: pointer;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
     position: relative;
     display: inline-block;
-    font-weight: 500;
-    font-size: 1rem;
-    border-radius: 0.3rem;
     overflow: hidden;
-    background: $orange-red;
-    color: $brand-black;
-    border: 1px solid $brand-black;
+    background: $backgroundAnim;
+    border: 1px solid $borderColor;
+    transition: $t01;
 
     span {
       position: relative;
@@ -37,7 +33,7 @@
 
     &::before {
       content: "";
-      background: white;
+      background: $background;
       width: 120%;
       left: -10%;
       transform: skew(30deg);
@@ -52,8 +48,78 @@
       }
 
       span {
-        color: white;
+        color: $textColor;
       }
     }
+
+    &:active {
+      transform: scale(0.95);
+    }
+    @content;
+  }
+}
+
+@mixin ButtonBubble(
+  $background: black,
+  $bubbleColor: #0c66ed,
+  $textColor: white,
+  $sizeBubble: 1rem
+) {
+  .mainButtonBubble {
+    color: $textColor;
+    background-color: $background;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: $t01;
+
+    span:not(:nth-child(6)) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: $sizeBubble;
+      width: $sizeBubble;
+      background-color: $bubbleColor;
+      border-radius: 50%;
+      transition: 0.6s ease;
+    }
+
+    span:nth-child(6) {
+      position: relative;
+    }
+
+    span:nth-child(1) {
+      transform: translate(-3.3em, -5rem);
+    }
+
+    span:nth-child(2) {
+      transform: translate(-6em, 5rem);
+    }
+
+    span:nth-child(3) {
+      transform: translate(-0.2em, 4rem);
+    }
+
+    span:nth-child(4) {
+      transform: translate(3.5em, 4rem);
+    }
+
+    span:nth-child(5) {
+      transform: translate(3.5em, -5rem);
+    }
+
+    &:hover {
+      span:not(:nth-child(6)) {
+        transform: translate(-50%, -50%) scale(4);
+        transition: 1.5s ease;
+      }
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    @content;
   }
 }

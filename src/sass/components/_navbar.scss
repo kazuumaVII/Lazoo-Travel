@@ -3,44 +3,46 @@
 
 @mixin Navbar() {
   .mainNavbar {
-    // border: 1px solid red;
     display: flex;
-    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
 
-    nav {
+    @include mediaMaxCustom(1250px) {
+      gap: 6rem;
+    }
+
+    img {
+      width: 6.9rem;
+      height: 2rem;
+    }
+
+    .navbarMenu {
       display: flex;
+      flex: 1;
+      max-width: 70rem;
       justify-content: space-between;
       align-items: center;
-      flex: 1;
-      gap: 13rem;
+      gap: 3rem;
 
-      img {
-        width: 5rem;
-        height: 1.5rem;
+      .nav {
+        text-decoration: none;
+        color: $brand-black;
+        transition: $t01;
+        font-weight: 500;
+        font-size: 1rem;
+
+        &:hover {
+          color: $orange-red;
+        }
       }
 
-      .navbarMenu {
-        display: flex;
-        flex: 1;
-        justify-content: space-between;
-        align-items: center;
-        gap: 3rem;
-        // width: 100%;
-        // border: 1px solid green;
-
-        .nav {
-          text-decoration: none;
-          color: $brand-black;
-          transition: $t01;
-          font-weight: 500;
-          font-size: 1rem;
-
-          &:hover {
-            color: $orange-red;
-          }
-        }
-
-        @include ButtonAnimSquare();
+      @include ButtonAnimSquare($beige, $orange-red) {
+        font-weight: 500;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        padding: 0.5rem 1rem;
       }
     }
   }
