@@ -59,10 +59,8 @@
       }
 
       @include About();
-      .a {
-        width: 100%;
-        background-color: black;
-      }
+
+      @include Category();
 
       .b {
         width: 100%;

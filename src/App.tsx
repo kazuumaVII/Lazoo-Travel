@@ -6,6 +6,7 @@ import { About } from "./pages/About";
 import { Header } from "./pages/Header";
 
 import Background from "../public/assets/images/background.png";
+import { Category } from "./pages/Category";
 
 function App() {
   const homepageOverflowRef = useRef<HTMLDivElement>(null);
@@ -21,6 +22,7 @@ function App() {
           ref={homepageOverflowRef}
         >
           <About />
+          <Category />
           <div className="a z"></div>
           {/* <div className="b z"></div>
           <div className="c z"></div> */}
