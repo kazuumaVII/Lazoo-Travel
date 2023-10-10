@@ -7,6 +7,10 @@ import Italy from "../../public/assets/images/cityCard_3.png";
 import London from "../../public/assets/images/cityCard_1.png";
 import Europe from "../../public/assets/images/cityCard_2.png";
 
+import Selection from "../../public/assets/icons/selection.svg";
+import Taxi from "../../public/assets/icons/taxi.svg";
+import WaterSport from "../../public/assets/icons/waterSport.svg";
+
 export const cardsData = [
   {
     icon: Satellite,
@@ -49,5 +53,29 @@ export const cardsDestData = [
     place: "Full Europe",
     price: "$15k",
     time: 28,
+  },
+];
+
+export const itemBooksData = [
+  {
+    icon: Selection,
+    color: "#F0BB1F",
+    title: "Choose Destination",
+    subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ",
+  },
+  {
+    icon: WaterSport,
+    color: "#F15A2B",
+    title: "Make Payment",
+    subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ",
+  },
+  {
+    icon: Taxi,
+    color: "#006380",
+    title: "Reach Airport on Selected Date",
+    subtitle:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ",
   },
 ];

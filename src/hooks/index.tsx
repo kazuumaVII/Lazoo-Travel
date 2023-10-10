@@ -67,3 +67,30 @@ export const useActiveSection = (
 
   return activeSection;
 };
+
+export const useScrollPosition = (ref: RefObject<HTMLDivElement>) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const homepageOverflowDiv = ref.current;
+      if (homepageOverflowDiv) {
+        const newScrollPosition = homepageOverflowDiv.scrollTop;
+        setScrollPosition(newScrollPosition);
+      }
+    };
+
+    const homepageOverflowDiv = ref.current;
+    if (homepageOverflowDiv) {
+      homepageOverflowDiv.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (homepageOverflowDiv) {
+        homepageOverflowDiv.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
+  return scrollPosition;
+};

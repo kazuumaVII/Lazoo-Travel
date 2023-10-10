@@ -23,16 +23,26 @@ export const ItemCardDest = (props: CardDestProps) => {
   const { image, place, price, time } = props;
 
   return (
-    <div className="mainItemCardDest">
-      <img className="cityImg" src={image} alt="" />
-      <div className="mainItemCardDest__text">
-        <div className="mainItemCardDest__text__top">
-          <p>{place}</p>
-          <p>{price}</p>
-        </div>
-        <div className="mainItemCardDest__text__bottom">
-          <img className="mouseSvg" src={Mouse} alt="" />
-          <p>{`${time} Days trip`}</p>
+    <div className="mainCardsMouseTracker">
+      <div className="canvas">
+        {Array.from(Array(25)).map((_, index) => (
+          <div key={index} className={`tracker tr-${index + 1}`}></div>
+        ))}
+
+        <div id="card">
+          <div className="mainItemCardDest__wrapper">
+            <img className="cityImg" src={image} alt="" />
+          </div>
+          <div className="mainItemCardDest__text">
+            <div className="mainItemCardDest__text__top">
+              <p>{place}</p>
+              <p>{price}</p>
+            </div>
+            <div className="mainItemCardDest__text__bottom">
+              <img className="mouseSvg" src={Mouse} alt="" />
+              <p>{`${time} Days trip`}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,98 @@
+@use "../utils/" as *;
+
+@mixin Booking() {
+  .mainBooking {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+
+    &__containerText {
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 60%;
+
+      h4 {
+        color: $blue-grey;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-family: "Volkhov", serif;
+        color: $blue-dark;
+        font-size: 3rem;
+      }
+
+      .containerItemText {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 80%;
+
+        span {
+          min-width: 2.2rem;
+          height: 2.2rem;
+          background-color: var(--color);
+          border-radius: 0.4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 50%;
+            height: 50%;
+          }
+        }
+
+        &__containerTitle {
+          h5 {
+            color: $blue-grey;
+            font-weight: 700;
+            font-size: 0.9rem;
+          }
+
+          p {
+            color: $blue-dark;
+            font-weight: 500;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    &__containerCards {
+      width: 27rem;
+      height: 20rem;
+      border: 1px solid black;
+
+      &__cards {
+        width: 80%;
+        height: 100%;
+        border-radius: 2rem;
+        border: 1px solid red;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &__containerImg {
+          width: 100%;
+          flex: 1;
+          border-radius: 2rem;
+          background-color: black;
+        }
+
+        &__containerText {
+          height: 9rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

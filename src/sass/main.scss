@@ -29,6 +29,8 @@
       top: 0;
       z-index: 0;
 
+      opacity: var(--opacity);
+
       @include mediaMaxCustom(1500px) {
         width: 40rem;
         height: 40rem;
@@ -59,23 +61,10 @@
       }
 
       @include About();
-
       @include Category();
+      @include Booking();
 
-      .b {
-        width: 100%;
-        background-color: red;
-      }
-
-      .c {
-        width: 100%;
-        background-color: yellow;
-      }
-
-      .z {
-        width: 100%;
-        min-height: 20rem;
-      }
+      padding-bottom: 50rem;
     }
   }
 }

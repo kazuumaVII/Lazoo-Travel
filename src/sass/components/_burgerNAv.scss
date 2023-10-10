@@ -64,7 +64,7 @@
         hr {
           position: absolute;
           left: 50%;
-          width: 30%;
+          width: 17rem;
           border-bottom: 14rem;
           transition: $t03;
           opacity: 0;
@@ -72,6 +72,10 @@
           border-color: $blue-dark;
           background-color: $blue-dark;
           border-radius: 0.5rem;
+
+          @include mediaMaxCustom(500px) {
+            width: 13rem;
+          }
         }
 
         .top {

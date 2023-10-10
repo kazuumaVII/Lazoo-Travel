@@ -27,3 +27,10 @@ export interface CardDestProps {
   price: string;
   time: number;
 }
+
+export interface ItemBooksProps {
+  icon: string;
+  color: string;
+  title: string;
+  subtitle: string;
+}

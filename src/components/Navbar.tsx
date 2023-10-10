@@ -67,9 +67,7 @@ export const Navbar = (props: HeaderProps) => {
         >
           Login
         </a>
-        <button>
-          <span>Sign up</span>
-        </button>
+        <button>Sign up</button>
       </div>
     </div>
   );
