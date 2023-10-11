@@ -10,6 +10,7 @@ import { Header } from "./pages/Header";
 import Background from "../public/assets/images/background.png";
 import { Category } from "./pages/Category";
 import { Booking } from "./pages/Booking";
+import { People } from "./pages/People";
 
 function App() {
   const homepageOverflowRef = useRef<HTMLDivElement>(null);
@@ -41,12 +42,13 @@ function App() {
         />
         <div
           className="homepage__overflow"
-          id="overflowScroll"
+          // id="overflowScroll"
           ref={homepageOverflowRef}
         >
           <About />
           <Category />
           <Booking />
+          <People />
         </div>
       </div>
     </div>

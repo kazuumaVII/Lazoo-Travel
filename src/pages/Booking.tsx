@@ -75,7 +75,7 @@ export const Booking = () => {
   return (
     <div className="mainBooking">
       <div className="mainBooking__containerText">
-        <h4>Easy and Fast</h4>
+        <h4>EASY AND FAST</h4>
         <h1>Book your next trip in 3 easy steps</h1>
 
         {itemBooksData.map((item, index) => (
