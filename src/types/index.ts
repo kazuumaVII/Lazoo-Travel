@@ -4,6 +4,9 @@ export interface HeaderProps {
 
 export interface ButtonProps {
   text: string;
+  disable?: boolean;
+  type?: "button" | "submit" | "reset";
+  handleClick?: () => void;
 }
 
 export interface ItemBurgerNAvProps {
@@ -33,4 +36,9 @@ export interface ItemBooksProps {
   color: string;
   title: string;
   subtitle: string;
+}
+
+export interface ItemFooterProps {
+  title: string;
+  list: { name: string }[];
 }

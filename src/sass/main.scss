@@ -65,8 +65,10 @@
       @include Category();
       @include Booking();
       @include People();
+      @include Contact();
+      @include Footer();
 
-      // padding-bottom: 50rem;
+      padding-bottom: 3rem;
     }
   }
 }

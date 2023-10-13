@@ -11,6 +11,21 @@ import Selection from "../../public/assets/icons/selection.svg";
 import Taxi from "../../public/assets/icons/taxi.svg";
 import WaterSport from "../../public/assets/icons/waterSport.svg";
 
+import User1 from "../../public/assets/images/user1.png";
+import User2 from "../../public/assets/images/user2.png";
+import User3 from "../../public/assets/images/user3.png";
+import User4 from "../../public/assets/images/user4.png";
+
+import Sponsor1 from "../../public/assets/images/sponsor1.svg";
+import Sponsor2 from "../../public/assets/images/sponsor2.svg";
+import Sponsor3 from "../../public/assets/images/sponsor3.svg";
+import Sponsor4 from "../../public/assets/images/sponsor4.svg";
+import Sponsor5 from "../../public/assets/images/sponsor5.svg";
+
+import Facebook from "../../public/assets/icons/fbIcon.svg";
+import Twitter from "../../public/assets/icons/twitterIcon.svg";
+import Instagram from "../../public/assets/icons/instaIcon.svg";
+
 export const cardsData = [
   {
     icon: Satellite,
@@ -77,5 +92,102 @@ export const itemBooksData = [
     title: "Reach Airport on Selected Date",
     subtitle:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ",
+  },
+];
+
+export const cardsPeopleData = [
+  {
+    icon: User1,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Mike Taylor",
+    location: "Washington, USA",
+  },
+  {
+    icon: User2,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    name: "Sophie Bunn",
+    location: "London, UK",
+  },
+  {
+    icon: User3,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, incididunt ut labore et dolore magna aliqua.",
+    name: "Carlos Heroa",
+    location: "Valencia, Espana",
+  },
+  {
+    icon: User4,
+    comment:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Emilie Rose",
+    location: "Paris, France",
+  },
+];
+
+export const sponsorsData = [
+  {
+    img: Sponsor2,
+  },
+  {
+    img: Sponsor3,
+  },
+  {
+    img: Sponsor1,
+  },
+  {
+    img: Sponsor4,
+  },
+  {
+    img: Sponsor5,
+  },
+];
+
+export const footerCompanyData = [
+  {
+    name: "About",
+  },
+  {
+    name: "Careers",
+  },
+  {
+    name: "Mobile",
+  },
+];
+
+export const footerContactData = [
+  {
+    name: "Help / FAQ",
+  },
+  {
+    name: "Press",
+  },
+  {
+    name: "Affiliates",
+  },
+];
+
+export const footerMoreData = [
+  {
+    name: "Community",
+  },
+  {
+    name: "Airline",
+  },
+  {
+    name: "Low fare tips",
+  },
+];
+
+export const footerStoreData = [
+  {
+    img: Facebook,
+  },
+  {
+    img: Instagram,
+  },
+  {
+    img: Twitter,
   },
 ];

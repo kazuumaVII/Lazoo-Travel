@@ -1,10 +1,10 @@
 import { ButtonProps } from "../types";
 
 export const ButtonBubble = (props: ButtonProps) => {
-  const { text } = props;
+  const { text, type, disable } = props;
 
   return (
-    <button className="mainButtonBubble">
+    <button disabled={disable} type={type} className="mainButtonBubble">
       <span className="circle1"></span>
       <span className="circle2"></span>
       <span className="circle3"></span>

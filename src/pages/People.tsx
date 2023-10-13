@@ -1,24 +1,9 @@
 import { useState } from "react";
 
+import { cardsPeopleData } from "../static";
+
 export const People = () => {
   const [dotActive, setDotActive] = useState<number>(0);
-
-  const tab = [
-    {
-      name: "1",
-    },
-    {
-      name: "2",
-    },
-    {
-      name: "3",
-    },
-    {
-      name: "4",
-    },
-  ];
-
-  console.log(tab.length, "iciiii");
 
   const getStyle = (index: number) => {
     if (dotActive === index) {
@@ -26,16 +11,22 @@ export const People = () => {
     }
     if (
       dotActive + 1 === index ||
-      (dotActive === tab.length - 1 && index === 0)
+      (dotActive === cardsPeopleData.length - 1 && index === 0)
     ) {
       return "back";
-    }
-
-    // if (dotActive === tab.length - 1) {
-    //   // console.log("ichoch");
-    // }
-    else {
+    } else {
       return "disable";
+    }
+  };
+
+  const handleClick = (index: number) => {
+    if (index === dotActive) {
+      return;
+    }
+    if (dotActive === cardsPeopleData.length - 1) {
+      setDotActive(0);
+    } else {
+      setDotActive(dotActive + 1);
     }
   };
 
@@ -46,7 +37,7 @@ export const People = () => {
         <h1>What People Say About Us</h1>
 
         <div className="containerDotList">
-          {tab.map((_, index) => (
+          {cardsPeopleData.map((_, index) => (
             <span
               key={index}
               onClick={() => setDotActive(index)}
@@ -58,8 +49,24 @@ export const People = () => {
         </div>
       </div>
       <div className="containerComment">
-        {tab.map((item, index) => (
-          <span className={`${getStyle(index)} `}>{item.name}</span>
+        {cardsPeopleData.map((item, index) => (
+          <div
+            className={`containerCardsComment ${getStyle(index)} `}
+            key={index}
+            onClick={() => handleClick(index)}
+          >
+            <div className="containerCards">
+              <span>
+                <img src={item.icon} alt="" />
+              </span>
+              <h5>{`"${item.comment}"`}</h5>
+              <div className="containerBottom">
+                <h4>{item.name}</h4>
+                <p>{item.location}</p>
+              </div>
+            </div>
+            {/* {item.name} */}
+          </div>
         ))}
       </div>
     </div>

@@ -3,17 +3,27 @@
 @mixin People() {
   .mainPeople {
     width: 100%;
-    min-height: 55rem;
-    border: 1px solid red;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 3rem;
+
+    @include mediaMaxCustom(950px) {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .containerTitle {
-      width: 30rem;
-      border: 1px solid red;
+      width: 50%;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
       gap: 1rem;
+
+      @include mediaMaxCustom(950px) {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+      }
 
       h5 {
         color: $blue-grey;
@@ -39,15 +49,18 @@
 
       .containerDotList {
         margin-top: 2rem;
-        // border: 1px solid red;
         width: 50%;
-        height: 20rem;
         display: flex;
         gap: 2rem;
+        padding-left: 1rem;
+
+        @include mediaMaxCustom(950px) {
+          justify-content: center;
+        }
 
         .containerDot {
-          width: 1.2rem;
-          height: 1.2rem;
+          min-width: 1rem;
+          height: 1rem;
           border-radius: 50%;
           background-color: $mercury;
           box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
@@ -63,15 +76,20 @@
     }
 
     .containerComment {
-      width: 40rem;
-      height: 80%;
-      border: 1px solid red;
+      min-width: 35rem;
+      height: 30rem;
       position: relative;
+      margin-top: -3rem;
 
-      span {
-        background-color: red;
-        width: 30rem;
-        height: 10rem;
+      @include mediaMaxCustom(760px) {
+        width: 65vw;
+        min-width: 0;
+      }
+
+      .containerCardsComment {
+        width: 31rem;
+        height: 16rem;
+        min-width: 17rem;
         border-radius: 1rem;
         position: absolute;
         display: flex;
@@ -79,25 +97,45 @@
         align-items: center;
         font-size: 5rem;
         transition: $t05;
-        // transition: myAnim 3s;
+
+        @include mediaMaxCustom(760px) {
+          width: 65vw;
+          height: 16rem;
+        }
+
+        @include mediaMaxCustom(480px) {
+          height: fit-content;
+        }
 
         &.top {
           left: 50%;
           top: 50%;
           transform: translate(-50%, -50%);
-          // top: 50%;
+          box-shadow: 0px 15px 30px 1px rgba(0, 0, 0, 0.1);
           z-index: 1;
           scale: 1;
           animation: myAnim 0.7s linear 0s 1;
+
+          .containerCards {
+            span {
+              opacity: 1;
+            }
+          }
         }
 
         &.back {
           top: 50%;
-          left: 50%;
+          left: 55%;
           transform: translate(-50%, -20%);
-          background-color: red;
-          opacity: 0.3;
-          scale: 0.9;
+          box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+
+          .containerCards {
+            cursor: pointer;
+
+            span {
+              opacity: 0;
+            }
+          }
         }
 
         &.disable {
@@ -105,6 +143,88 @@
           left: 50%;
           transform: translate(-50%, -20%);
           opacity: 0;
+          pointer-events: none;
+        }
+
+        .containerCards {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          border-radius: 1.8rem;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          background-color: white;
+          transition: $t05;
+
+          @include mediaMaxCustom(700px) {
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+          }
+
+          span {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            @include mediaMaxCustom(700px) {
+              left: 50%;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          h5 {
+            font-size: 1rem;
+            color: $blue-grey;
+            font-weight: 500;
+            line-height: 2rem;
+
+            @include mediaMaxCustom(700px) {
+              font-size: 0.9rem;
+              line-height: 1.6rem;
+              margin-top: 1rem;
+            }
+          }
+
+          .containerBottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.3rem;
+
+            h4 {
+              font-size: 1rem;
+              color: $blue-grey;
+
+              @include mediaMaxCustom(700px) {
+                font-size: 0.9rem;
+              }
+            }
+
+            p {
+              font-size: 0.9rem;
+              color: $blue-grey;
+              font-weight: 500;
+
+              @include mediaMaxCustom(700px) {
+                font-size: 0.8rem;
+              }
+            }
+          }
         }
 
         @keyframes myAnim {

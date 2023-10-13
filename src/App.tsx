@@ -11,6 +11,8 @@ import Background from "../public/assets/images/background.png";
 import { Category } from "./pages/Category";
 import { Booking } from "./pages/Booking";
 import { People } from "./pages/People";
+import { Contact } from "./pages/Contact";
+import { Footer } from "./pages/Footer";
 
 function App() {
   const homepageOverflowRef = useRef<HTMLDivElement>(null);
@@ -49,6 +51,8 @@ function App() {
           <Category />
           <Booking />
           <People />
+          <Contact />
+          <Footer />
         </div>
       </div>
     </div>

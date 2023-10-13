@@ -171,7 +171,6 @@
 
     .planeImg {
       position: absolute;
-      // transform: translate(-50%, -50%);
       z-index: 1;
 
       @include mediaMaxCustom(1500px) {
@@ -182,10 +181,6 @@
       &.right {
         right: 0;
         top: 50;
-
-        @include mediaMaxCustom(1300px) {
-          // left: 93%;
-        }
 
         @include mediaMaxCustom(1000px) {
           width: 9rem;
@@ -270,7 +265,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      // border: 1px solid red;
     }
   }
 }
