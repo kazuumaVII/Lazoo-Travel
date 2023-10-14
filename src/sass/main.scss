@@ -3,13 +3,33 @@
 @use "pages" as *;
 
 #App {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   justify-content: center;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
 
   // * {
   //   box-shadow: 0 0 0 3px red inset;
   // }
+
+  .lala {
+    min-height: 20rem;
+    width: 30rem;
+    background-color: red;
+    margin-top: 4rem;
+  }
+
+  .b {
+    background-color: black;
+  }
+
+  .c {
+    background-color: green;
+  }
 
   .homepage {
     display: flex;
@@ -51,7 +71,7 @@
     &__overflow {
       width: 100%;
       flex: 1;
-      overflow: scroll;
+      overflow-x: scroll;
       display: flex;
       flex-direction: column;
       gap: 5rem;

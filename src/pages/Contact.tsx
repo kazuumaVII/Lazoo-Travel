@@ -42,7 +42,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="mainContact">
+    <section className="mainContact" id="Contact">
       <div className="containerSponsorsList">
         {sponsorsData.map((item, index) => (
           <div className="containerSponsor" key={index}>
@@ -103,6 +103,6 @@ export const Contact = () => {
           <p>{emailStatus === "invalid" ? "Invalid Email" : "Email Sent"}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -3,6 +3,8 @@ import { MouseEvent } from "react";
 import { useActiveSection } from "../hooks";
 import { HeaderProps } from "../types";
 
+import { navData } from "../static";
+
 export const Navbar = (props: HeaderProps) => {
   const { homepageOverflowRef } = props;
 
@@ -17,56 +19,33 @@ export const Navbar = (props: HeaderProps) => {
   };
 
   const isActive = (id: string) => {
-    if (id === "about" && !activeSection) {
+    if (id === "About" && !activeSection) {
       return "active";
     } else {
       return id === activeSection ? "active" : "";
     }
   };
 
+  const ItemNav = (props: { name: string }) => {
+    const { name } = props;
+    return (
+      <a
+        className={`nav ${isActive(name)}`}
+        data-scroll={name}
+        href={`#${name}`}
+        onClick={(e) => handleClick(e, name)}
+      >
+        {name}
+      </a>
+    );
+  };
+
   return (
     <div className="mainNavbar">
       <div className="navbarMenu">
-        <a
-          className={`nav ${isActive("about")}`}
-          data-scroll="about"
-          href="#about"
-          onClick={(e) => handleClick(e, "about")}
-        >
-          Destination
-        </a>
-        <a
-          className={`nav ${isActive("services")}`}
-          data-scroll="services"
-          href="#services"
-          onClick={(e) => handleClick(e, "services")}
-        >
-          Hotels
-        </a>
-        <a
-          className={`nav ${isActive("techno")}`}
-          data-scroll="techno"
-          href="#techno"
-          onClick={(e) => handleClick(e, "techno")}
-        >
-          Flights
-        </a>
-        <a
-          className={`nav ${isActive("contact")}`}
-          data-scroll="contact"
-          href="#contact"
-          onClick={(e) => handleClick(e, "contact")}
-        >
-          Bookings
-        </a>
-        <a
-          className={`nav ${isActive("contact")}`}
-          data-scroll="contact"
-          href="#contact"
-          onClick={(e) => handleClick(e, "contact")}
-        >
-          Login
-        </a>
+        {navData.map((item, index) => (
+          <ItemNav name={item.name} key={index} />
+        ))}
         <button>Sign up</button>
       </div>
     </div>

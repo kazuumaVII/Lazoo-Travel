@@ -37,7 +37,7 @@ const ItemStore = (props: { img: string }) => {
 
 export const Footer = () => {
   return (
-    <div className="mainFooter">
+    <div className="mainFooter" id="footer">
       <div className="containerInfoFooter">
         <div className="containerLogo">
           <img src={Logo} alt="" />

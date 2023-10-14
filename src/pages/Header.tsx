@@ -16,7 +16,7 @@ export const Header = (props: HeaderProps) => {
     <div className="mainHeader">
       <img src={Logo} alt="" />
       {isBurgerNAv ? (
-        <BurgerNav />
+        <BurgerNav homepageOverflowRef={homepageOverflowRef} />
       ) : (
         <Navbar homepageOverflowRef={homepageOverflowRef} />
       )}

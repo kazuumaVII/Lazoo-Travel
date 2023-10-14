@@ -51,7 +51,7 @@ export const ItemCardDest = (props: CardDestProps) => {
 
 export const Category = () => {
   return (
-    <div className="mainCategory">
+    <section className="mainCategory" id="Selling">
       <div className="containerServices">
         <div className="containerServices__containerTitle">
           <h5 className="topSubtitle">CATEGORY</h5>
@@ -85,6 +85,6 @@ export const Category = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

@@ -1,5 +1,7 @@
 import "./sass/main.scss";
 
+import sal from "sal.js";
+
 import { useEffect, useRef, useState } from "react";
 
 import { useScrollPosition } from "./hooks";
@@ -23,17 +25,31 @@ function App() {
 
   useEffect(() => {
     const getOpacityValue = () => {
-      if (scrollValue >= 300 && scrollValue <= 700) {
+      if (scrollValue >= 300) {
         const newOpacity = 1 - (scrollValue - 300) / (700 - 300);
-        setOpacity(newOpacity);
+        if (scrollValue >= 700) {
+          setOpacity(0);
+        } else {
+          setOpacity(newOpacity);
+        }
+      } else {
+        setOpacity(1);
       }
     };
 
     getOpacityValue();
   }, [scrollValue]);
 
+  useEffect(() => {
+    sal();
+  }, []);
+
   return (
     <div id="App">
+      <div className="lala a"></div>
+      <div className="lala b" data-sal="fade"></div>
+      <div className="lala c" data-sal="fade"></div>
+      <div className="lala d" data-sal="fade"></div>
       <div className="homepage">
         <Header homepageOverflowRef={homepageOverflowRef} />
         <img
@@ -42,17 +58,18 @@ function App() {
           alt=""
           style={{ "--opacity": opacity } as React.CSSProperties}
         />
+
         <div
           className="homepage__overflow"
-          // id="overflowScroll"
+          id="overflowScroll"
           ref={homepageOverflowRef}
         >
-          <About />
+          {/* <About />
           <Category />
           <Booking />
           <People />
           <Contact />
-          <Footer />
+          <Footer /> */}
         </div>
       </div>
     </div>

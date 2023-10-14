@@ -13,8 +13,18 @@ export const About = () => {
 
   const tabFormat = useMediaQuery("(max-width: 1000px)");
 
+  const ItemImg = () => {
+    return (
+      <>
+        <img src={Plane} className="planeImg left" alt="" />
+        <img className="travelerImg" src={Traveler} alt="" />
+        <img src={Plane} className="planeImg right" alt="" />
+      </>
+    );
+  };
+
   return (
-    <div className="mainAbout">
+    <section className="mainAbout" id="About">
       <div className="leftContainer">
         <h3>Best Destinations around the world</h3>
         <h1>Travel, enjoy and live a new and full life</h1>
@@ -39,17 +49,13 @@ export const About = () => {
 
       {tabFormat ? (
         <div className="bottomContainer">
-          <img src={Plane} className="planeImg left" alt="" />
-          <img className="travelerImg" src={Traveler} alt="" />
-          <img src={Plane} className="planeImg right" alt="" />
+          <ItemImg />
         </div>
       ) : (
         <>
-          <img src={Plane} className="planeImg left" alt="" />
-          <img className="travelerImg" src={Traveler} alt="" />
-          <img src={Plane} className="planeImg right" alt="" />
+          <ItemImg />
         </>
       )}
-    </div>
+    </section>
   );
 };

@@ -6,7 +6,7 @@
     height: 100%;
     position: relative;
 
-    input[type="checkbox"]:checked ~ {
+    &.activeStyle {
       .containerBlur {
         backdrop-filter: blur(0.8rem);
         pointer-events: all;
@@ -30,6 +30,14 @@
         }
       }
     }
+
+    // input[type="checkbox"]:checked ~ {
+    //   .containerBlur {
+    //     backdrop-filter: blur(0.8rem);
+    //     pointer-events: all;
+    //   }
+
+    // }
 
     .containerBlur {
       position: fixed;
@@ -94,17 +102,22 @@
           font-weight: 600;
           font-size: 1.7rem;
 
-          &:hover {
+          &:not(.active):hover {
             hr {
               transform: translate(-50%, -50%);
               opacity: 1;
             }
           }
+
+          &.active {
+            color: $orange-red;
+            font-weight: 700;
+            cursor: auto;
+          }
         }
       }
     }
 
-    .checkbox,
     .hamburgerLines {
       position: absolute;
       left: 90%;
@@ -112,19 +125,11 @@
       transform: translate(-50%, -50%);
       width: 32px;
       height: 26px;
-    }
-
-    .checkbox {
-      z-index: 5;
-      opacity: 0;
-      cursor: pointer;
-    }
-
-    .hamburgerLines {
       z-index: 2;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      cursor: pointer;
 
       .line {
         display: block;

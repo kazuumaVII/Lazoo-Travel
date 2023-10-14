@@ -36,6 +36,12 @@
         &:hover {
           color: $orange-red;
         }
+
+        &.active {
+          color: $orange-red;
+          font-weight: 600;
+          cursor: default;
+        }
       }
 
       @include ButtonAnimSquare($orange-red, $brand-black) {

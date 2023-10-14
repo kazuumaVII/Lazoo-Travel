@@ -26,6 +26,21 @@ import Facebook from "../../public/assets/icons/fbIcon.svg";
 import Twitter from "../../public/assets/icons/twitterIcon.svg";
 import Instagram from "../../public/assets/icons/instaIcon.svg";
 
+export const navData = [
+  {
+    name: "About",
+  },
+  {
+    name: "Selling",
+  },
+  {
+    name: "Destination",
+  },
+  {
+    name: "Contact",
+  },
+];
+
 export const cardsData = [
   {
     icon: Satellite,

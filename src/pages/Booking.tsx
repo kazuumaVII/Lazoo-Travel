@@ -73,7 +73,7 @@ export const Booking = () => {
   }, [isHover]);
 
   return (
-    <div className="mainBooking">
+    <section className="mainBooking" id="Destination">
       <div className="mainBooking__containerText">
         <h4>EASY AND FAST</h4>
         <h1>Book your next trip in 3 easy steps</h1>
@@ -138,6 +138,6 @@ export const Booking = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
