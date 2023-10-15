@@ -1,6 +1,6 @@
 import "./sass/main.scss";
 
-import sal from "sal.js";
+import ScrollReveal from "scrollreveal";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -40,16 +40,8 @@ function App() {
     getOpacityValue();
   }, [scrollValue]);
 
-  useEffect(() => {
-    sal();
-  }, []);
-
   return (
     <div id="App">
-      <div className="lala a"></div>
-      <div className="lala b" data-sal="fade"></div>
-      <div className="lala c" data-sal="fade"></div>
-      <div className="lala d" data-sal="fade"></div>
       <div className="homepage">
         <Header homepageOverflowRef={homepageOverflowRef} />
         <img
@@ -64,12 +56,12 @@ function App() {
           id="overflowScroll"
           ref={homepageOverflowRef}
         >
-          {/* <About />
+          <About />
           <Category />
           <Booking />
           <People />
           <Contact />
-          <Footer /> */}
+          <Footer />
         </div>
       </div>
     </div>

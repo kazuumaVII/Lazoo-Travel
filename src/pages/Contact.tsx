@@ -1,6 +1,7 @@
 import { sponsorsData } from "../static";
 
 import { ButtonBubble } from "../components/Button";
+import { ScrollRev } from "../utils";
 
 import Mask1 from "../../public/assets/images/contactMask.svg";
 import MouseSend from "../../public/assets/icons/mouseSend.svg";
@@ -45,9 +46,13 @@ export const Contact = () => {
     <section className="mainContact" id="Contact">
       <div className="containerSponsorsList">
         {sponsorsData.map((item, index) => (
-          <div className="containerSponsor" key={index}>
+          <ScrollRev
+            className="containerSponsor"
+            delay={500 * (index + 1)}
+            key={index}
+          >
             <img src={item.img} alt="" key={index} />
-          </div>
+          </ScrollRev>
         ))}
       </div>
       <div className="containerContact">
@@ -55,13 +60,15 @@ export const Contact = () => {
           <img className="mask1Svg maskSvg" src={Mask1} alt="" />
           <img className="mask2Svg maskSvg" src={Mask1} alt="" />
 
-          <h2>
-            Subscribe to get information, latest news and other interesting
-            offers about Jadoo
-          </h2>
+          <ScrollRev delay={800} origin={"bottom"} distance="70px">
+            <h2>
+              Subscribe to get information, latest news and other interesting
+              offers about Lazoo
+            </h2>
+          </ScrollRev>
 
           <form className="containerForm" onSubmit={handleEmailCheck}>
-            <div className="containerInput">
+            <ScrollRev className="containerInput" delay={500}>
               <span className="containerIcon">
                 <div
                   className={`wrapperLoader ${
@@ -83,7 +90,7 @@ export const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-            </div>
+            </ScrollRev>
 
             <ButtonBubble
               type={"submit"}

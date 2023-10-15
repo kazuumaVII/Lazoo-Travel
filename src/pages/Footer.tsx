@@ -7,7 +7,7 @@ import {
   footerStoreData,
 } from "../static";
 
-import Logo from "../../public/assets/images/logo2.svg";
+import Logo from "../../public/assets/images/Lazoo.png";
 import GooglePlay from "../../public/assets/images/googlePlay.svg";
 import AppleStore from "../../public/assets/images/appleStore.svg";
 
@@ -61,7 +61,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <h4>All rights reserved@jadoo.co</h4>
+      <h4>All rights reserved@Lazoo.co</h4>
     </div>
   );
 };

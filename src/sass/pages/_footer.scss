@@ -37,13 +37,14 @@
         }
 
         img {
-          width: 11rem;
+          width: 10rem;
         }
 
         p {
           font-size: 0.9rem;
           color: $blue-grey;
           font-weight: 500;
+          margin-top: -4rem;
         }
       }
 
@@ -75,8 +76,7 @@
           gap: 1rem;
 
           h5 {
-            font-size: 1.6rem;
-            // font-weight: 700;
+            font-size: 1.2rem;
             color: $blue-dark;
           }
 

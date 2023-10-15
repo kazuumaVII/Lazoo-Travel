@@ -1,5 +1,9 @@
+import { useEffect, useState } from "react";
+
 import { itemBooksData } from "../static";
 import { ItemBooksProps } from "../types";
+
+import { ScrollRev } from "../utils";
 
 import CardsBooking from "../../public/assets/images/cardsBooking.png";
 import EllipseBlue from "../../public/assets/images/ellipseBlue.png";
@@ -10,19 +14,27 @@ import Heart from "../../public/assets/icons/heart.svg";
 import Map from "../../public/assets/icons/map.svg";
 import Building from "../../public/assets/icons/building.svg";
 import Mouse from "../../public/assets/icons/mouse_2.svg";
-import { useEffect, useState } from "react";
 
 export const ItemText = (props: ItemBooksProps) => {
-  const { icon, title, subtitle, color } = props;
+  const { icon, title, subtitle, color, index } = props;
   return (
     <div className="containerItemText">
-      <span style={{ "--color": color } as React.CSSProperties}>
-        <img src={icon} alt="" />
-      </span>
-      <div className="containerItemText__containerTitle">
+      <ScrollRev delay={900 * (index + 1)} duration={1000}>
+        <span style={{ "--color": color } as React.CSSProperties}>
+          <img src={icon} alt="" />
+        </span>
+      </ScrollRev>
+
+      <ScrollRev
+        className="containerItemText__containerTitle"
+        delay={500 * (index + 1)}
+        duration={1000}
+        origin={"left"}
+        distance="50px"
+      >
         <h5>{title}</h5>
         <p>{subtitle}</p>
-      </div>
+      </ScrollRev>
     </div>
   );
 };
@@ -75,11 +87,16 @@ export const Booking = () => {
   return (
     <section className="mainBooking" id="Destination">
       <div className="mainBooking__containerText">
-        <h4>EASY AND FAST</h4>
-        <h1>Book your next trip in 3 easy steps</h1>
+        <ScrollRev delay={500} origin={"left"} distance="300px">
+          <h4>EASY AND FAST</h4>
+        </ScrollRev>
+        <ScrollRev delay={500} origin={"right"} distance="300px">
+          <h1>Book your next trip in 3 easy steps</h1>
+        </ScrollRev>
 
         {itemBooksData.map((item, index) => (
           <ItemText
+            index={index}
             key={index}
             icon={item.icon}
             title={item.title}
@@ -88,7 +105,11 @@ export const Booking = () => {
           />
         ))}
       </div>
-      <div className="mainBooking__containerCards">
+      <ScrollRev
+        className="mainBooking__containerCards"
+        delay={1000}
+        duration={3000}
+      >
         <img className="ellipseImg" src={EllipseBlue} alt="" />
         <div className="mainBooking__containerCards__cards">
           <div className="mainBooking__containerCards__cards__containerImg">
@@ -117,27 +138,37 @@ export const Booking = () => {
           onMouseLeave={() => setIsHover(false)}
           className="mainBooking__containerCards__containerCardAnimation"
         >
-          <img src={CitySmallCard} alt="" />
-          <div className="mainBooking__containerCards__containerCardAnimation__containerText">
-            <div className="mainBooking__containerCards__containerCardAnimation__containerText__title">
-              <p>Ongoing</p>
-              <h5>Trip to rome</h5>
-            </div>
-            <div className="mainBooking__containerCards__containerCardAnimation__containerText__containerProgressBar">
-              <p>
-                <span>{Math.round(percentage)}%</span>
-                {isHover || percentage > 0 ? "completed" : "Hover me"}
-              </p>
-              <div className="mainBooking__containerCards__containerCardAnimation__containerText__containerProgressBar__progressBar">
-                <div
-                  style={{ "--width": `${percentage}%` } as React.CSSProperties}
-                  className="filler lala"
-                ></div>
+          <ScrollRev
+            className="wrapper"
+            delay={3000}
+            duration={1000}
+            origin={"left"}
+            distance="300px"
+          >
+            <img src={CitySmallCard} alt="" />
+            <div className="mainBooking__containerCards__containerCardAnimation__containerText">
+              <div className="mainBooking__containerCards__containerCardAnimation__containerText__title">
+                <p>Ongoing</p>
+                <h5>Trip to rome</h5>
+              </div>
+              <div className="mainBooking__containerCards__containerCardAnimation__containerText__containerProgressBar">
+                <p>
+                  <span>{Math.round(percentage)}%</span>
+                  {isHover || percentage > 0 ? "completed" : "Hover me"}
+                </p>
+                <div className="mainBooking__containerCards__containerCardAnimation__containerText__containerProgressBar__progressBar">
+                  <div
+                    style={
+                      { "--width": `${percentage}%` } as React.CSSProperties
+                    }
+                    className="filler lala"
+                  ></div>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollRev>
         </div>
-      </div>
+      </ScrollRev>
     </section>
   );
 };

@@ -19,12 +19,14 @@ export interface HomepageOverflowRef {
 }
 
 export interface CardProps {
+  index: number;
   icon: string;
   title: string;
   subtitle: string;
 }
 
 export interface CardDestProps {
+  index: number;
   image: string;
   place: string;
   price: string;
@@ -32,6 +34,7 @@ export interface CardDestProps {
 }
 
 export interface ItemBooksProps {
+  index: number;
   icon: string;
   color: string;
   title: string;
@@ -41,4 +44,13 @@ export interface ItemBooksProps {
 export interface ItemFooterProps {
   title: string;
   list: { name: string }[];
+}
+
+export interface ScrollRevProps {
+  children?: React.ReactNode;
+  className?: string;
+  delay?: number;
+  origin?: string;
+  duration?: number;
+  distance?: string;
 }

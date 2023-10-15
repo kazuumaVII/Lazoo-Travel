@@ -12,6 +12,11 @@
     z-index: 5;
     gap: 10vw;
 
+    img {
+      width: 9rem;
+      margin-top: 1rem;
+    }
+
     @include Navbar();
 
     @include BurgerNav();

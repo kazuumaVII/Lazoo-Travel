@@ -4,7 +4,7 @@ import { HeaderProps } from "../types";
 
 import { useMediaQuery } from "../hooks";
 
-import Logo from "../../public/assets/images/Logo.png";
+import Logo from "../../public/assets/images/Lazoo.png";
 import { BurgerNav } from "../components/BurgerNav";
 
 export const Header = (props: HeaderProps) => {

@@ -1,4 +1,6 @@
-import { useState, useEffect, RefObject } from "react";
+import { useState, useEffect, RefObject, useRef } from "react";
+
+import ScrollReveal from "scrollreveal";
 
 export const useMediaQuery = (query: string) => {
   const [matches, setMatches] = useState(false);
@@ -66,6 +68,27 @@ export const useActiveSection = (
   }, [homepageOverflowRef]);
 
   return activeSection;
+};
+
+export const useScrollReveal = (props: any) => {
+  const { children, className } = props;
+
+  const sectionRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const sr = ScrollReveal();
+    if (sectionRef.current) {
+      sr.reveal(sectionRef.current, {
+        reset: true,
+        delay: 500,
+      });
+    }
+  }, []);
+
+  return (
+    <section ref={sectionRef} className={className}>
+      {children}
+    </section>
+  );
 };
 
 export const useScrollPosition = (ref: RefObject<HTMLDivElement>) => {
