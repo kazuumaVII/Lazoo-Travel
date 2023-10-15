@@ -87,10 +87,10 @@ export const Booking = () => {
   return (
     <section className="mainBooking" id="Destination">
       <div className="mainBooking__containerText">
-        <ScrollRev delay={500} origin={"left"} distance="300px">
+        <ScrollRev delay={500} origin={"right"} distance="300px">
           <h4>EASY AND FAST</h4>
         </ScrollRev>
-        <ScrollRev delay={500} origin={"right"} distance="300px">
+        <ScrollRev delay={500} origin={"left"} distance="300px">
           <h1>Book your next trip in 3 easy steps</h1>
         </ScrollRev>
 
