@@ -1,0 +1,55 @@
+@use "../utils" as *;
+@use "./button" as *;
+
+@mixin Navbar() {
+  .mainNavbar {
+    display: flex;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+
+    @include mediaMaxCustom(1250px) {
+      gap: 6rem;
+    }
+
+    img {
+      width: 6.9rem;
+      height: 2rem;
+    }
+
+    .navbarMenu {
+      display: flex;
+      flex: 1;
+      max-width: 70rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+
+      .nav {
+        text-decoration: none;
+        color: $brand-black;
+        transition: $t01;
+        font-weight: 500;
+        font-size: 1rem;
+
+        &:hover {
+          color: $orange-red;
+        }
+
+        &.active {
+          color: $orange-red;
+          font-weight: 600;
+          cursor: default;
+        }
+      }
+
+      @include ButtonAnimSquare($orange-red, $brand-black) {
+        font-weight: 500;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

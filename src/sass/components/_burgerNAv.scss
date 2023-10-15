@@ -1,0 +1,157 @@
+@use "../utils" as *;
+
+@mixin BurgerNav() {
+  .mainNavBurger {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &.activeStyle {
+      .containerBlur {
+        backdrop-filter: blur(0.8rem);
+        pointer-events: all;
+      }
+
+      .containerItems {
+        transform: translate(-50%, -50%);
+      }
+
+      .hamburgerLines {
+        .line1 {
+          transform: rotate(45deg);
+        }
+
+        .line2 {
+          transform: scaleY(0);
+        }
+
+        .line3 {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    // input[type="checkbox"]:checked ~ {
+    //   .containerBlur {
+    //     backdrop-filter: blur(0.8rem);
+    //     pointer-events: all;
+    //   }
+
+    // }
+
+    .containerBlur {
+      position: fixed;
+      transition: $t04;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      pointer-events: none;
+    }
+
+    .containerItems {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 50vh;
+      transform: translate(-550%, -50%);
+      transition: $t04;
+
+      li {
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        list-style: none;
+        position: relative;
+
+        hr {
+          position: absolute;
+          left: 50%;
+          width: 17rem;
+          border-bottom: 14rem;
+          transition: $t03;
+          opacity: 0;
+          height: 0.1rem;
+          border-color: $blue-dark;
+          background-color: $blue-dark;
+          border-radius: 0.5rem;
+
+          @include mediaMaxCustom(500px) {
+            width: 13rem;
+          }
+        }
+
+        .top {
+          top: -40%;
+          transform: translate(-300%, -50%);
+        }
+
+        .bottom {
+          bottom: -40%;
+          transform: translate(300%, -50%);
+        }
+
+        a {
+          text-decoration: none;
+          color: $blue-dark;
+          font-weight: 600;
+          font-size: 1.7rem;
+
+          &:not(.active):hover {
+            hr {
+              transform: translate(-50%, -50%);
+              opacity: 1;
+            }
+          }
+
+          &.active {
+            color: $orange-red;
+            font-weight: 700;
+            cursor: auto;
+          }
+        }
+      }
+    }
+
+    .hamburgerLines {
+      position: absolute;
+      left: 90%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 26px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+      }
+
+      .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+
+      .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    }
+  }
+}

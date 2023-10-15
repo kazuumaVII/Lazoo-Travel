@@ -1,0 +1,377 @@
+@use "../utils/" as *;
+
+@mixin Booking() {
+  .mainBooking {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+    margin-top: 4rem;
+
+    @include mediaMaxCustom(1340px) {
+      gap: 4rem;
+    }
+
+    @include mediaMaxCustom(1045px) {
+      gap: 3rem;
+    }
+
+    @include mediaMaxCustom(950px) {
+      flex-direction: column;
+    }
+
+    &__containerText {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 60%;
+      width: 45rem;
+
+      @include mediaMaxCustom(950px) {
+        text-align: center;
+        width: 100%;
+      }
+
+      h4 {
+        color: $blue-grey;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
+
+        @include mediaMaxCustom(600px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      h1 {
+        font-family: "Volkhov", serif;
+        color: $blue-dark;
+        font-size: 3rem;
+        line-height: 3.5rem;
+
+        @include mediaMaxCustom(600px) {
+          font-size: 2.3rem;
+        }
+      }
+
+      .containerItemText {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 30rem;
+        margin-top: 2rem;
+
+        @include mediaMaxCustom(1340px) {
+          width: 90%;
+        }
+
+        @include mediaMaxCustom(950px) {
+          flex-direction: column;
+          width: 100%;
+          margin-top: 2rem;
+        }
+
+        span {
+          min-width: 2.2rem;
+          height: 2.2rem;
+          background-color: var(--color);
+          border-radius: 0.4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 50%;
+            height: 50%;
+          }
+        }
+
+        &__containerTitle {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+
+          h5 {
+            color: $blue-grey;
+            font-weight: 600;
+            font-size: 0.9rem;
+          }
+
+          p {
+            color: $blue-grey;
+            font-weight: 400;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    &__containerCards {
+      min-width: 30rem;
+      height: 25rem;
+      position: relative;
+      z-index: 4;
+
+      @include mediaMaxCustom(950px) {
+        margin-top: 3rem;
+      }
+
+      @include mediaMaxCustom(700px) {
+        min-width: 20rem;
+        width: 50vw;
+        height: 21rem;
+      }
+
+      .ellipseImg {
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -50%);
+
+        @include mediaMaxCustom(700px) {
+          width: 70vw;
+          height: 70vw;
+        }
+      }
+
+      &__cards {
+        width: 77%;
+        height: 100%;
+        border-radius: 2rem;
+        padding: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        box-shadow: 0px 25px 30px -10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        background-color: white;
+        z-index: 5;
+
+        @include mediaMaxCustom(700px) {
+          width: 90%;
+          gap: 1.5rem;
+        }
+
+        &__containerImg {
+          width: 100%;
+          flex: 1;
+          border-radius: 2rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &__containerText {
+          height: 11rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          h5 {
+            font-size: 18px;
+            color: $blue-dark;
+            font-weight: 500;
+
+            @include mediaMaxCustom(700px) {
+              font-size: 14px;
+            }
+          }
+
+          p {
+            font-size: 16px;
+            color: $blue-grey;
+            font-weight: 500;
+
+            @include mediaMaxCustom(700px) {
+              font-size: 13px;
+            }
+          }
+
+          &__iconList {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-left: 0.3rem;
+
+            .containerIcon {
+              min-width: 2rem;
+              min-height: 2rem;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: #f5f5f5;
+
+              @include mediaMaxCustom(700px) {
+                min-width: 1.6rem;
+                min-height: 1.6rem;
+              }
+
+              &:nth-child(3) {
+                img {
+                  width: 50%;
+                  height: 50%;
+                }
+              }
+
+              img {
+                width: 40%;
+                height: 40%;
+              }
+            }
+          }
+          &__people {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__left {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+
+              img {
+                width: 1.2rem;
+                height: 1.2rem;
+
+                @include mediaMaxCustom(700px) {
+                  width: 1rem;
+                  height: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__containerCardAnimation {
+        width: 15rem;
+        height: 7rem;
+        position: absolute;
+        left: 94%;
+        top: 75%;
+        transform: translate(-100%, -50%);
+        z-index: 10;
+
+        .wrapper {
+          width: 100%;
+          height: 100%;
+          border-radius: 1rem;
+          background-color: white;
+          box-shadow: 0px 25px 30px -10px rgba(0, 0, 0, 0.1);
+          padding: 1rem;
+          display: flex;
+          gap: 1rem;
+          z-index: 10;
+          cursor: pointer;
+        }
+
+        @include mediaMaxCustom(700px) {
+          width: 13rem;
+          height: 6rem;
+          left: 100%;
+        }
+
+        &:hover {
+          .mainBooking__containerCards__containerCardAnimation__containerText {
+            .mainBooking__containerCards__containerCardAnimation__containerText__containerProgressBar {
+              .mainBooking__containerCards__containerCardAnimation__containerText__containerProgressBar__progressBar {
+                .filler {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+
+        img {
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+
+          @include mediaMaxCustom(700px) {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+
+        &__containerText {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex: 1;
+
+          &__title {
+            p {
+              font-size: 0.7rem;
+              font-weight: 500;
+              color: $blue-grey;
+
+              @include mediaMaxCustom(700px) {
+                font-size: 0.6rem;
+              }
+            }
+
+            h5 {
+              font-size: 0.9rem;
+              font-weight: 600;
+              color: $blue-dark;
+
+              @include mediaMaxCustom(700px) {
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          &__containerProgressBar {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            p {
+              font-size: 0.7rem;
+              font-weight: 500;
+              color: $blue-grey;
+              display: flex;
+              gap: 0.3rem;
+              font-weight: 600;
+              color: $blue-dark;
+
+              @include mediaMaxCustom(700px) {
+                font-size: 0.6rem;
+              }
+
+              span {
+                font-weight: 600;
+                color: $purple;
+              }
+            }
+
+            &__progressBar {
+              width: 100%;
+              height: 0.3rem;
+              background-color: #f5f5f5;
+              border-radius: 2rem;
+              position: relative;
+              overflow: hidden;
+
+              .filler {
+                width: 0;
+                height: 100%;
+                background-color: $purple;
+                position: absolute;
+                border-radius: 2rem;
+                transition: width 2s linear;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
