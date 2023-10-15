@@ -19,9 +19,9 @@ export const About = () => {
     return (
       <ScrollRev className="containerImg" delay={1000} duration={2000}>
         <div className="wrapper">
-          <img src={Plane} className="planeImg left" alt="" />
-          <img className="travelerImg" src={Traveler} alt="" />
           <img src={Plane} className="planeImg right" alt="" />
+          <img className="travelerImg" src={Traveler} alt="" />
+          <img src={Plane} className="planeImg left" alt="" />
         </div>
       </ScrollRev>
     );

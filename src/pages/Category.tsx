@@ -66,20 +66,10 @@ export const Category = () => {
     <section className="mainCategory" id="Selling">
       <div className="containerServices">
         <div className="containerServices__containerTitle">
-          <ScrollRev
-            delay={500}
-            origin={"left"}
-            duration={1000}
-            distance="300px"
-          >
+          <ScrollRev delay={500} origin={"left"} distance="100px">
             <h5 className="topSubtitle">CATEGORY</h5>
           </ScrollRev>
-          <ScrollRev
-            delay={500}
-            origin={"right"}
-            duration={1000}
-            distance="300px"
-          >
+          <ScrollRev delay={500} origin={"right"} distance="100px">
             <h1 className="topTitle">We Offer Best Services</h1>
           </ScrollRev>
         </div>
@@ -97,21 +87,11 @@ export const Category = () => {
       </div>
       <div className="containerDestinations">
         <div className="containerDestinations__containerTitle">
-          <ScrollRev
-            delay={500}
-            origin={"left"}
-            duration={1000}
-            distance="300px"
-          >
+          <ScrollRev delay={500} origin={"left"} distance="100px">
             <h5 className="topSubtitle">TOP SELLING</h5>
           </ScrollRev>
 
-          <ScrollRev
-            delay={500}
-            origin={"right"}
-            duration={1000}
-            distance="300px"
-          >
+          <ScrollRev delay={500} origin={"right"} distance="100px">
             <h1 className="topTitle">Top Destinations</h1>
           </ScrollRev>
         </div>

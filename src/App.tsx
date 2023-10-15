@@ -1,7 +1,5 @@
 import "./sass/main.scss";
 
-import ScrollReveal from "scrollreveal";
-
 import { useEffect, useRef, useState } from "react";
 
 import { useScrollPosition } from "./hooks";

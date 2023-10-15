@@ -12,7 +12,7 @@ export const ScrollRev = (props: ScrollRevProps) => {
     const sr = ScrollReveal();
     if (sectionRef.current) {
       sr.reveal(sectionRef.current, {
-        reset: true,
+        reset: false,
         delay: delay || 0,
         origin: origin || "bottom",
         duration: duration || 1000,
