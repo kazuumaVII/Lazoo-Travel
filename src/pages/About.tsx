@@ -30,10 +30,10 @@ export const About = () => {
   return (
     <section className="mainAbout" id="About">
       <div className="leftContainer">
-        <ScrollRev delay={500} origin={"left"} distance="100px">
+        <ScrollRev delay={500} origin={"left"} distance="300px">
           <h3>Best Destinations around the world</h3>
         </ScrollRev>
-        <ScrollRev delay={1000} distance="100px">
+        <ScrollRev delay={1000} distance="200px">
           <h1>Travel, enjoy and live a new and full life</h1>
         </ScrollRev>
         <ScrollRev delay={1200}>

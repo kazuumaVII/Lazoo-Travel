@@ -18,6 +18,7 @@
       flex-direction: column;
       justify-content: flex-start;
       gap: 1rem;
+      overflow: hidden;
 
       @include mediaMaxCustom(950px) {
         text-align: center;
@@ -98,6 +99,7 @@
       .containerCardsComment {
         width: 31rem;
         height: 16rem;
+        min-height: fit-content;
         min-width: 17rem;
         border-radius: 1rem;
         position: absolute;
@@ -109,11 +111,11 @@
 
         @include mediaMaxCustom(760px) {
           width: 65vw;
-          height: 16rem;
+          // height: 16rem;
         }
 
         @include mediaMaxCustom(480px) {
-          height: fit-content;
+          // height: fit-content;
         }
 
         &.top {

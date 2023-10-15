@@ -27,7 +27,7 @@ export const ItemText = (props: ItemBooksProps) => {
 
       <ScrollRev
         className="containerItemText__containerTitle"
-        delay={500 * (index + 1)}
+        delay={300 * (index + 1)}
         duration={1000}
         origin={"left"}
         distance="50px"
@@ -108,7 +108,7 @@ export const Booking = () => {
       <ScrollRev
         className="mainBooking__containerCards"
         delay={1000}
-        duration={3000}
+        duration={1500}
       >
         <img className="ellipseImg" src={EllipseBlue} alt="" />
         <div className="mainBooking__containerCards__cards">
@@ -140,7 +140,7 @@ export const Booking = () => {
         >
           <ScrollRev
             className="wrapper"
-            delay={3000}
+            delay={2000}
             duration={1000}
             origin={"left"}
             distance="300px"

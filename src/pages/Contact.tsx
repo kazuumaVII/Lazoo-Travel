@@ -48,7 +48,7 @@ export const Contact = () => {
         {sponsorsData.map((item, index) => (
           <ScrollRev
             className="containerSponsor"
-            delay={500 * (index + 1)}
+            delay={300 * (index + 1)}
             key={index}
           >
             <img src={item.img} alt="" key={index} />
