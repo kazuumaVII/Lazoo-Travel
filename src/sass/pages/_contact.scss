@@ -46,7 +46,6 @@
       background-color: rgba(223, 215, 249, 0.3);
 
       @include mediaMaxCustom(650px) {
-        height: fit-content;
         min-height: 30rem;
         border-radius: 3rem;
       }

@@ -1,9 +1,11 @@
 import { MouseEvent, useState } from "react";
 
-import { useActiveSection } from "../hooks";
+import { useActiveSection, useMediaQuery } from "../hooks";
 import { HeaderProps } from "../types";
 
 import { navData } from "../static";
+
+import Lazoo from "../../public/assets/images/lazoo.png";
 
 export const BurgerNav = (props: HeaderProps) => {
   const { homepageOverflowRef } = props;
@@ -11,6 +13,7 @@ export const BurgerNav = (props: HeaderProps) => {
   const [isNavbarActive, setIsNavbarActive] = useState(false);
 
   const activeSection = useActiveSection(homepageOverflowRef);
+  const isBurgerNAv = useMediaQuery("(max-width: 950px)");
 
   const isActive = (id: string) => {
     if (id === "About" && !activeSection) {
@@ -51,7 +54,12 @@ export const BurgerNav = (props: HeaderProps) => {
   };
 
   return (
-    <div className={`mainNavBurger ${isNavbarActive ? "activeStyle" : ""} `}>
+    <div
+      className={`mainNavBurger ${isNavbarActive ? "activeStyle" : ""} ${
+        isBurgerNAv ? "burgerNavStyle" : ""
+      } `}
+    >
+      <img className="blurImg" src={Lazoo} alt="" />
       <div className="containerBlur"></div>
       <div
         className="hamburgerLines"

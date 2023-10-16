@@ -4,10 +4,11 @@
   .mainBooking {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 9rem;
     margin-top: 4rem;
+    // overflow: hidden;
 
     @include mediaMaxCustom(1340px) {
       gap: 4rem;
@@ -27,6 +28,7 @@
       gap: 1rem;
       width: 60%;
       width: 45rem;
+      overflow: hidden;
 
       @include mediaMaxCustom(950px) {
         text-align: center;
@@ -38,6 +40,7 @@
         font-weight: 600;
         letter-spacing: 0.1rem;
         font-size: 1rem;
+        margin-left: 500;
 
         @include mediaMaxCustom(600px) {
           font-size: 0.8rem;
@@ -109,7 +112,7 @@
 
     &__containerCards {
       min-width: 30rem;
-      height: 25rem;
+      height: 28rem;
       position: relative;
       z-index: 4;
 
@@ -120,7 +123,7 @@
       @include mediaMaxCustom(700px) {
         min-width: 20rem;
         width: 50vw;
-        height: 21rem;
+        height: 24rem;
       }
 
       .ellipseImg {
@@ -139,7 +142,7 @@
 
       &__cards {
         width: 77%;
-        height: 100%;
+        min-height: fit-content;
         border-radius: 2rem;
         padding: 1.2rem;
         display: flex;
@@ -253,7 +256,7 @@
         width: 15rem;
         height: 7rem;
         position: absolute;
-        left: 94%;
+        left: 100%;
         top: 75%;
         transform: translate(-100%, -50%);
         z-index: 10;

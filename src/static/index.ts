@@ -5,7 +5,7 @@ import Fly from "../../public/assets/icons/fly.svg";
 
 import Italy from "../../public/assets/images/cityCard_3.png";
 import London from "../../public/assets/images/cityCard_1.png";
-import Europe from "../../public/assets/images/cityCard_2.png";
+import Europe from "../../public/assets/images/cityCard_2.svg";
 
 import Selection from "../../public/assets/icons/selection.svg";
 import Taxi from "../../public/assets/icons/taxi.svg";

@@ -16,8 +16,12 @@
     @include mediaMaxCustom(1000px) {
       flex-direction: column;
       gap: 3rem;
-      margin-top: 2rem;
+      margin-top: 4rem;
       min-height: fit-content;
+    }
+
+    @include mediaMaxCustom(950px) {
+      margin-top: 0rem;
     }
 
     .leftContainer {
@@ -179,64 +183,6 @@
       }
     }
 
-    .planeImg {
-      position: absolute;
-      z-index: 1;
-
-      @include mediaMaxCustom(1500px) {
-        width: 8rem;
-        height: 8rem;
-      }
-
-      &.right {
-        right: 0;
-        top: 50;
-
-        @include mediaMaxCustom(1000px) {
-          width: 9rem;
-          height: 9rem;
-          margin-top: 2rem;
-        }
-
-        @include mediaMaxCustom(600px) {
-          width: 6rem;
-          height: 6rem;
-        }
-
-        @include mediaMaxCustom(400px) {
-          width: 4rem;
-          height: 4rem;
-        }
-      }
-
-      &.left {
-        left: 30%;
-        top: 10%;
-        transform: translate(-50%, -50%);
-
-        @include mediaMaxCustom(1300px) {
-          // left: 25%;
-          width: 9rem;
-          height: 9rem;
-        }
-
-        @include mediaMaxCustom(1000px) {
-          left: 20%;
-          top: 20%;
-        }
-
-        @include mediaMaxCustom(600px) {
-          width: 6rem;
-          height: 6rem;
-        }
-
-        @include mediaMaxCustom(400px) {
-          width: 4rem;
-          height: 4rem;
-        }
-      }
-    }
-
     .bottomContainer {
       position: relative;
       width: 100%;
@@ -274,10 +220,13 @@
       width: fit-content;
       height: fit-content;
       position: absolute;
-      right: 0%;
+      left: 90%;
+      top: 50%;
+      transform: translate(-90%, -50%);
 
       @include mediaMaxCustom(1000px) {
         position: static;
+        transform: none;
       }
 
       .wrapper {

@@ -5,7 +5,7 @@ import { ItemBooksProps } from "../types";
 
 import { ScrollRev } from "../utils";
 
-import CardsBooking from "../../public/assets/images/cardsBooking.png";
+import CardsBooking from "../../public/assets/images/cardsBooking.svg";
 import EllipseBlue from "../../public/assets/images/ellipseBlue.png";
 import CitySmallCard from "../../public/assets/images/citySmallCard.png";
 
@@ -19,7 +19,7 @@ export const ItemText = (props: ItemBooksProps) => {
   const { icon, title, subtitle, color, index } = props;
   return (
     <div className="containerItemText">
-      <ScrollRev delay={900 * (index + 1)} duration={1000}>
+      <ScrollRev delay={500 * (index + 1)} duration={1000}>
         <span style={{ "--color": color } as React.CSSProperties}>
           <img src={icon} alt="" />
         </span>
@@ -27,7 +27,7 @@ export const ItemText = (props: ItemBooksProps) => {
 
       <ScrollRev
         className="containerItemText__containerTitle"
-        delay={500 * (index + 1)}
+        delay={200 * (index + 1)}
         duration={1000}
         origin={"left"}
         distance="50px"
@@ -87,10 +87,10 @@ export const Booking = () => {
   return (
     <section className="mainBooking" id="Destination">
       <div className="mainBooking__containerText">
-        <ScrollRev delay={500} origin={"left"} distance="300px">
+        <ScrollRev delay={300} origin={"right"} distance="300px">
           <h4>EASY AND FAST</h4>
         </ScrollRev>
-        <ScrollRev delay={500} origin={"right"} distance="300px">
+        <ScrollRev delay={300} origin={"left"} distance="300px">
           <h1>Book your next trip in 3 easy steps</h1>
         </ScrollRev>
 
@@ -108,7 +108,7 @@ export const Booking = () => {
       <ScrollRev
         className="mainBooking__containerCards"
         delay={1000}
-        duration={3000}
+        duration={1500}
       >
         <img className="ellipseImg" src={EllipseBlue} alt="" />
         <div className="mainBooking__containerCards__cards">
@@ -140,10 +140,10 @@ export const Booking = () => {
         >
           <ScrollRev
             className="wrapper"
-            delay={3000}
+            delay={1000}
             duration={1000}
             origin={"left"}
-            distance="300px"
+            distance="400px"
           >
             <img src={CitySmallCard} alt="" />
             <div className="mainBooking__containerCards__containerCardAnimation__containerText">

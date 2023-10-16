@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     gap: 6rem;
+    padding-bottom: 3rem;
 
     @include mediaMaxCustom(1100px) {
       gap: 3rem;
