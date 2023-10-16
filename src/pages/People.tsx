@@ -35,10 +35,10 @@ export const People = () => {
   return (
     <div className="mainPeople">
       <div className="containerTitle">
-        <ScrollRev delay={500} origin={"left"} distance="300px">
+        <ScrollRev delay={300} origin={"left"} distance="300px">
           <h5>TESTIMONIALS</h5>
         </ScrollRev>
-        <ScrollRev delay={500} origin={"right"} distance="300px">
+        <ScrollRev delay={300} origin={"right"} distance="300px">
           <h1>What People Say About Us</h1>
         </ScrollRev>
 
@@ -59,7 +59,7 @@ export const People = () => {
           ))}
         </div>
       </div>
-      <ScrollRev className="containerComment" delay={2000} duration={1500}>
+      <ScrollRev className="containerComment" delay={1000} duration={1000}>
         {cardsPeopleData.map((item, index) => (
           <div
             className={`containerCardsComment ${getStyle(index)} `}

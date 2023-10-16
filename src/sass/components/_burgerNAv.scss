@@ -2,14 +2,58 @@
 
 @mixin BurgerNav() {
   .mainNavBurger {
-    width: 100%;
+    width: 90%;
     height: 100%;
     position: relative;
+
+    @include mediaMaxCustom(750px) {
+      width: 88%;
+    }
+
+    @include mediaMaxCustom(650px) {
+      width: 84%;
+    }
+
+    @include mediaMaxCustom(550px) {
+      width: 79%;
+    }
+
+    @include mediaMaxCustom(450px) {
+      width: 74%;
+    }
+
+    @include mediaMaxCustom(400px) {
+      width: 70%;
+    }
+
+    // @include mediaMaxCustom(750px) {
+    //   width: 76%;
+    // }
+
+    &.burgerNavStyle {
+      position: fixed;
+      height: 4rem;
+      opacity: 1;
+
+      .blurImg {
+        width: 10rem;
+        position: absolute;
+        left: 2%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        z-index: 2;
+      }
+    }
 
     &.activeStyle {
       .containerBlur {
         backdrop-filter: blur(0.8rem);
         pointer-events: all;
+      }
+
+      .blurImg {
+        opacity: 1;
       }
 
       .containerItems {
@@ -32,16 +76,10 @@
     }
 
     // input[type="checkbox"]:checked ~ {
-    //   .containerBlur {
-    //     backdrop-filter: blur(0.8rem);
-    //     pointer-events: all;
-    //   }
-
-    // }
 
     .containerBlur {
       position: fixed;
-      transition: $t04;
+      transition: $t03;
       top: 0;
       left: 0;
       width: 100%;
@@ -60,7 +98,7 @@
       width: 100%;
       height: 50vh;
       transform: translate(-550%, -50%);
-      transition: $t04;
+      transition: $t03;
 
       li {
         margin-bottom: 1.2rem;

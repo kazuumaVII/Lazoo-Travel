@@ -9,10 +9,12 @@ export const ScrollRev = (props: ScrollRevProps) => {
 
   const sectionRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    const sr = ScrollReveal();
+    const sr = ScrollReveal({
+      container: document.querySelector(".homepage__overflow"),
+    });
     if (sectionRef.current) {
       sr.reveal(sectionRef.current, {
-        reset: false,
+        reset: true,
         delay: delay || 0,
         origin: origin || "bottom",
         duration: duration || 1000,

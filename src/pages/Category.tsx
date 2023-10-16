@@ -31,7 +31,7 @@ export const ItemCardDest = (props: CardDestProps) => {
   return (
     <ScrollRev
       className="mainCardsMouseTracker"
-      delay={300 * (index + 1)}
+      delay={200 * (index + 1)}
       origin={index % 2 === 0 ? "top" : "bottom"}
       duration={1000}
       distance="100px"
@@ -66,10 +66,10 @@ export const Category = () => {
     <section className="mainCategory" id="Selling">
       <div className="containerServices">
         <div className="containerServices__containerTitle">
-          <ScrollRev delay={500} origin={"left"} distance="300px">
+          <ScrollRev delay={200} origin={"left"} distance="300px">
             <h5 className="topSubtitle">CATEGORY</h5>
           </ScrollRev>
-          <ScrollRev delay={500} origin={"right"} distance="300px">
+          <ScrollRev delay={200} origin={"right"} distance="300px">
             <h1 className="topTitle">We Offer Best Services</h1>
           </ScrollRev>
         </div>
@@ -87,11 +87,11 @@ export const Category = () => {
       </div>
       <div className="containerDestinations">
         <div className="containerDestinations__containerTitle">
-          <ScrollRev delay={500} origin={"left"} distance="300px">
+          <ScrollRev delay={200} origin={"left"} distance="300px">
             <h5 className="topSubtitle">TOP SELLING</h5>
           </ScrollRev>
 
-          <ScrollRev delay={500} origin={"right"} distance="300px">
+          <ScrollRev delay={200} origin={"right"} distance="300px">
             <h1 className="topTitle">Top Destinations</h1>
           </ScrollRev>
         </div>

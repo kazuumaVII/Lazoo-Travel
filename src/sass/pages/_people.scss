@@ -19,6 +19,7 @@
       justify-content: flex-start;
       gap: 1rem;
       overflow: hidden;
+      padding-bottom: 2rem;
 
       @include mediaMaxCustom(950px) {
         text-align: center;
@@ -49,7 +50,7 @@
       }
 
       .containerDotList {
-        margin-top: 2rem;
+        margin-top: 1rem;
         width: 50%;
         display: flex;
         gap: 2rem;

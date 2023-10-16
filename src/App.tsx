@@ -2,7 +2,7 @@ import "./sass/main.scss";
 
 import { useEffect, useRef, useState } from "react";
 
-import { useScrollPosition } from "./hooks";
+import { useScrollPosition, useMediaQuery } from "./hooks";
 
 import { About } from "./pages/About";
 import { Header } from "./pages/Header";
@@ -20,6 +20,7 @@ function App() {
   const [opacity, setOpacity] = useState<number>(1);
 
   const scrollValue = useScrollPosition(homepageOverflowRef);
+  const isBurgerNAv = useMediaQuery("(max-width: 950px)");
 
   useEffect(() => {
     const getOpacityValue = () => {
@@ -41,19 +42,22 @@ function App() {
   return (
     <div id="App">
       <div className="homepage">
-        <Header homepageOverflowRef={homepageOverflowRef} />
+        {!isBurgerNAv && <Header homepageOverflowRef={homepageOverflowRef} />}
+
         <img
           src={Background}
           className="background"
           alt=""
           style={{ "--opacity": opacity } as React.CSSProperties}
         />
-
         <div
-          className="homepage__overflow"
+          className={`homepage__overflow ${
+            isBurgerNAv ? "burgerNavStyle" : ""
+          } `}
           id="overflowScroll"
           ref={homepageOverflowRef}
         >
+          {isBurgerNAv && <Header homepageOverflowRef={homepageOverflowRef} />}
           <About />
           <Category />
           <Booking />

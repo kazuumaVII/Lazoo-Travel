@@ -4,7 +4,7 @@
   .mainBooking {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 9rem;
     margin-top: 4rem;
@@ -256,7 +256,7 @@
         width: 15rem;
         height: 7rem;
         position: absolute;
-        left: 94%;
+        left: 100%;
         top: 75%;
         transform: translate(-100%, -50%);
         z-index: 10;
