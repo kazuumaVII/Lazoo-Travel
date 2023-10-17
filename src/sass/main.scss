@@ -36,31 +36,6 @@
 
     @include Header();
 
-    .test {
-      width: 40rem;
-      min-height: 40rem;
-      background-color: red;
-
-      &:nth-child(1) {
-        background-color: black;
-      }
-      &:nth-child(2) {
-        background-color: yellow;
-      }
-
-      &:nth-child(3) {
-        background-color: blue;
-      }
-
-      &:nth-child(4) {
-        background-color: purple;
-      }
-
-      &:nth-child(5) {
-        background-color: rosybrown;
-      }
-    }
-
     &__overflow {
       width: 100%;
       overflow-x: scroll;
@@ -69,7 +44,7 @@
       flex-direction: column;
       padding: 0 7rem;
 
-      gap: 5rem;
+      gap: 9rem;
       position: relative;
 
       &.burgerNavStyle {

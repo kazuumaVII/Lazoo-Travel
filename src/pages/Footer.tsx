@@ -61,7 +61,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <h4>All rights reserved@Lazoo.co</h4>
+      <h4>All rights reserved@Lazoo.com</h4>
     </div>
   );
 };

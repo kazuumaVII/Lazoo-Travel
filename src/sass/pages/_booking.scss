@@ -7,8 +7,6 @@
     justify-content: space-around;
     align-items: center;
     gap: 9rem;
-    margin-top: 4rem;
-    // overflow: hidden;
 
     @include mediaMaxCustom(1340px) {
       gap: 4rem;
@@ -20,6 +18,7 @@
 
     @include mediaMaxCustom(950px) {
       flex-direction: column;
+      margin-top: 8rem;
     }
 
     &__containerText {

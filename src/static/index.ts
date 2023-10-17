@@ -5,7 +5,7 @@ import Fly from "../../public/assets/icons/fly.svg";
 
 import Italy from "../../public/assets/images/cityCard_3.png";
 import London from "../../public/assets/images/cityCard_1.png";
-import Europe from "../../public/assets/images/cityCard_2.svg";
+import Europe from "../../public/assets/images/cityCard_2.png";
 
 import Selection from "../../public/assets/icons/selection.svg";
 import Taxi from "../../public/assets/icons/taxi.svg";
@@ -45,23 +45,22 @@ export const cardsData = [
   {
     icon: Satellite,
     title: "Calculated Weather",
-    subtitle: "Built Wicket longer admire do barton vanity itself do in it.",
+    subtitle: "Weather updates tailored for every leg of your journey",
   },
   {
     icon: Fly,
     title: "Best Flights",
-    subtitle: "Engrossed listening. Park gate sell they west hard for the.",
+    subtitle: "With our top flight picks, every journey becomes an experience",
   },
   {
     icon: Micro,
     title: "Local Events",
-    subtitle:
-      "Barton vanity itself do in it. Prefer to men it engrossed listening. ",
+    subtitle: "With our top flight picks, every journey becomes an experience",
   },
   {
     icon: Mech,
     title: "Customization",
-    subtitle: "We deliver outsourced aviation services for military customers",
+    subtitle: "Craft the journey of your dreams with our customization options",
   },
 ];
 
@@ -92,21 +91,21 @@ export const itemBooksData = [
     color: "#F0BB1F",
     title: "Choose Destination",
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ",
+      "From mountain peaks to sun-kissed beaches, what scenery will charm you for your next trip ?",
   },
   {
     icon: WaterSport,
     color: "#F15A2B",
     title: "Make Payment",
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ",
+      "Your dream trip is just a few clicks away with our streamlined payment process.",
   },
   {
     icon: Taxi,
     color: "#006380",
     title: "Reach Airport on Selected Date",
     subtitle:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. ",
+      "Start your journey stress-free by arriving at the airport on the selected date.",
   },
 ];
 
@@ -114,28 +113,28 @@ export const cardsPeopleData = [
   {
     icon: User1,
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "From booking to arrival, everything was smooth and straightforward. I'm impressed by their professionalism. I recommend them 100% ! ",
     name: "Mike Taylor",
     location: "Washington, USA",
   },
   {
     icon: User2,
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "He payment process was transparent and reassuring. No surprises, everything was clear from start to finish.",
     name: "Sophie Bunn",
     location: "London, UK",
   },
   {
     icon: User3,
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, incididunt ut labore et dolore magna aliqua.",
+      "I really appreciated the calculated weather option. I was always prepared, no matter the weather.",
     name: "Carlos Heroa",
     location: "Valencia, Espana",
   },
   {
     icon: User4,
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A big thank you to the agency for making my trip unforgettable. The best flights, the best rates, everything was top-notch !",
     name: "Emilie Rose",
     location: "Paris, France",
   },

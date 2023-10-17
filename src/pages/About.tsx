@@ -1,18 +1,15 @@
 import { useState } from "react";
 
 import { ButtonBubble } from "../components/Button";
-import { useMediaQuery } from "../hooks";
 
 import { ScrollRev } from "../utils";
 
-import Traveler from "../../public/assets/images/travelerPlane.svg";
+import Traveler from "../../public/assets/images/travelerPlane.png";
 
 import Polygon from "../../public/assets/icons/Polygon.svg";
 
 export const About = () => {
   const [isHover, setIsHover] = useState(false);
-
-  const tabFormat = useMediaQuery("(max-width: 1000px)");
 
   return (
     <section className="mainAbout" id="About">
@@ -25,9 +22,9 @@ export const About = () => {
         </ScrollRev>
         <ScrollRev delay={800}>
           <p>
-            Built Wicket longer admire do barton vanity itself do in it.
-            Preferred to sportsmen it engrossed listening. Park gate sell they
-            west hard for the.
+            Traveling is more than just moving from point A to point B. It's an
+            invitation to experience new things, to encounter diverse cultures,
+            and to marvel at the hidden treasures of our planet.
           </p>
         </ScrollRev>
         <div className="leftContainer__button">

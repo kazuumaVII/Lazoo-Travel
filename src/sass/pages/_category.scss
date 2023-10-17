@@ -9,6 +9,10 @@
     justify-content: center;
     gap: 5rem;
 
+    @include mediaMaxCustom(950px) {
+      margin-top: 4rem;
+    }
+
     .topSubtitle {
       color: $blue-grey;
       font-weight: 600;
