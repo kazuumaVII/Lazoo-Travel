@@ -10,6 +10,7 @@
     @include mediaMaxCustom(950px) {
       flex-direction: column;
       align-items: center;
+      margin-top: 4rem;
     }
 
     .containerTitle {
@@ -55,19 +56,21 @@
         display: flex;
         gap: 2rem;
         padding-left: 1rem;
+        position: relative;
 
         @include mediaMaxCustom(950px) {
           justify-content: center;
+          padding-left: 0;
         }
 
         .containerDot {
-          min-width: 1rem;
-          height: 1rem;
+          min-width: 0.8rem;
+          height: 0.8rem;
           border-radius: 50%;
 
           .wrapper {
-            min-width: 1rem;
-            height: 1rem;
+            min-width: 0.9rem;
+            min-height: 0.9rem;
             border-radius: 50%;
             width: 100%;
             height: 100%;
@@ -100,7 +103,6 @@
       .containerCardsComment {
         width: 31rem;
         height: 16rem;
-        min-height: fit-content;
         min-width: 17rem;
         border-radius: 1rem;
         position: absolute;
@@ -112,11 +114,10 @@
 
         @include mediaMaxCustom(760px) {
           width: 65vw;
-          // height: 16rem;
         }
 
         @include mediaMaxCustom(480px) {
-          // height: fit-content;
+          min-height: 20rem;
         }
 
         &.top {

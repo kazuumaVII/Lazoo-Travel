@@ -220,13 +220,14 @@
       width: fit-content;
       height: fit-content;
       position: absolute;
-      left: 90%;
-      top: 50%;
-      transform: translate(-90%, -50%);
+      right: 0;
+      top: 50;
+      margin-right: 3rem;
 
       @include mediaMaxCustom(1000px) {
         position: static;
         transform: none;
+        margin-right: 0;
       }
 
       .wrapper {

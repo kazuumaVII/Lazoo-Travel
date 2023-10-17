@@ -8,6 +8,7 @@ export const ScrollRev = (props: ScrollRevProps) => {
   const { children, className, delay, origin, duration, distance } = props;
 
   const sectionRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const sr = ScrollReveal({
       container: document.querySelector(".homepage__overflow"),
@@ -21,6 +22,7 @@ export const ScrollRev = (props: ScrollRevProps) => {
         distance: distance || "0px",
         easing: "ease-out",
         opacity: 0,
+        mobile: false,
       });
     }
   }, []);
